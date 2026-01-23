@@ -36,7 +36,7 @@ const Hero = () => {
             an aspiring web developer and a tech enthusiast !
           </p>
           <div className='inline-flex items-center gap-3 my-10'>
-            <a href="/CV.pdf" target='_blank'>
+            <a href="/cv-template.pdf" target='_blank'>
               <NewButton 
                 title='Download CV' position='right'
                 icon={<FaDownload />} />
