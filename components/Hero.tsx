@@ -1,11 +1,8 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
-import MagicButton from './ui/MyButton';
-import { FaLocationArrow } from 'react-icons/fa';
 import { FaDownload } from 'react-icons/fa6';
-import MyButton from './ui/MyButton';
 import NewButton from './ui/NewButton';
 
 const Hero = () => {
@@ -16,7 +13,6 @@ const Hero = () => {
         <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='purple'/>
         <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue'/>
       </div>
-
       <div className="flex h-screen w-full items-center justify-center absolute top-0 left-0 dark:bg-black-100 dark:bg-grid-white/[0.03] bg-white">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white 
         [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
@@ -30,7 +26,6 @@ const Hero = () => {
             className='text-center text-[40px] md:text-5xl lg:text-5xl'
             words='Hello, this is Meet Thakkar'
             filter={false}
-            // duration={3.0}
           />
           <p className='text-center md:tracking-wider text-xs md:text-lg lg:text-xl'>
             an aspiring web developer and a tech enthusiast !
@@ -41,16 +36,10 @@ const Hero = () => {
                 title='Download CV' position='right'
                 icon={<FaDownload />} />
             </a>
-            {/* <a href="/CV.pdf" target='_blank'>
-              <MyButton
-                title='Download CV' position='right'
-                icon={<FaDownload />} />
-            </a> */}
           </div>
         </div>
       </div>
     </div>
   )
 }
-
 export default Hero

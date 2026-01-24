@@ -7,7 +7,7 @@ const NewButton = ({
     icon: React.ReactNode,
     position: string,
     handleClick?: () => void,
-    otherClasses?: string
+    otherClasses?: string,
 }) => {
   return (
     <button onClick={handleClick} className={`border tracking-widest rounded-lg  bg-black-100

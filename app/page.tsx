@@ -13,7 +13,6 @@ export default function Home() {
         <FloatingNav navItems={[{name: 'Home', link: '/', icon: <FaHome/>}]}/>
         <Hero />
         <Grid />
-        
         {/* <Card /> */}
       </div>
     </main>

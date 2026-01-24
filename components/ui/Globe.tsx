@@ -113,40 +113,45 @@ export function Globe({ globeConfig, data }: WorldProps) {
     globeMaterial.shininess = globeConfig.shininess || 0.9;
   };
 
-  const _buildData = () => {
-    const arcs = data;
-    let points = [];
-    for (let i = 0; i < arcs.length; i++) {
-      const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.startLat,
-        lng: arc.startLng,
-      });
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.endLat,
-        lng: arc.endLng,
-      });
-    }
+const _buildData = () => {
+  const arcs = data;
+  const points: any[] = [];
 
-    // remove duplicates for same lat and lng
-    const filteredPoints = points.filter(
-      (v, i, a) =>
-        a.findIndex((v2) =>
-          ["lat", "lng"].every(
-            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
-          )
-        ) === i
-    );
+  for (let i = 0; i < arcs.length; i++) {
+    const arc = arcs[i];
+    const rgb = hexToRgb(arc.color);
+    if (!rgb) continue;
 
-    setGlobeData(filteredPoints);
-  };
+    const pointColor = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)`;
+    const ringColor = (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`;
+
+    points.push({
+      size: defaultProps.pointSize,
+      order: arc.order,
+      color: pointColor,     // ✅ string for points
+      ringColor,             // ✅ function for rings
+      lat: arc.startLat,
+      lng: arc.startLng,
+    });
+
+    points.push({
+      size: defaultProps.pointSize,
+      order: arc.order,
+      color: pointColor,
+      ringColor,
+      lat: arc.endLat,
+      lng: arc.endLng,
+    });
+  }
+
+  const filteredPoints = points.filter(
+    (v, i, a) =>
+      a.findIndex((v2) => v2.lat === v.lat && v2.lng === v.lng) === i
+  );
+
+  setGlobeData(filteredPoints);
+};
+
 
   useEffect(() => {
     if (globeRef.current && globeData) {
@@ -186,7 +191,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashAnimateTime((e) => defaultProps.arcTime);
 
     globeRef.current
-      .pointsData(data)
+      .pointsData(globeData)
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
@@ -194,7 +199,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
+      .ringColor((e: any) => (t: number) => e.ringColor(t))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(

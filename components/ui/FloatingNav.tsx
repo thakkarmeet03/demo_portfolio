@@ -40,7 +40,6 @@ export const FloatingNav = ({
       }
     }
   });
-
   return (
     <AnimatePresence mode="wait">
       <motion.div
