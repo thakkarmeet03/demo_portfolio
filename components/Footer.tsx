@@ -13,7 +13,7 @@ const Footer = () => {
             <h1 className="mt-28 mx-auto heading justify-center text-center md:max-w-[45vw]">
                 Ready to take your digital presence to <span className="text-purple">the next level ?</span>
             </h1>
-            <p className='mt-14 mb-8 text-white-200 text-center md:w-auto max-w-[72vw] mx-auto'>
+            <p className='mt-14 mb-8 text-white-200 text-center md:w-auto max-w-[79vw] mx-auto'>
                 Reach out to me and let's discuss how I can help you achieve your goals.</p>
             <a href='mailto:test@gmail.co'>
                 <div className='flex justify-center'><NewButton title='Get in Touch' icon={<FaPaperPlane />} position='right'/></div>
