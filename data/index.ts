@@ -2,6 +2,7 @@ export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -28,7 +29,7 @@ export const GridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
+    title: "my tech stack",
     description: "I constantly try to improve",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -107,33 +108,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Meet was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Meet's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Meet is the ideal partner.",
+    name: "Joh Doe",
+    title: "CEO of Pixel Lab Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Meet was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Meet's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Meet is the ideal partner.",
+    name: "Joh Doe",
+    title: "CEO of Pixel Lab Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Meet was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Meet's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Meet is the ideal partner.",
+    name: "Joh Doe",
+    title: "CEO of Pixel Lab Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Meet was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Meet's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Meet is the ideal partner.",
+    name: "Joh Doe",
+    title: "CEO of Pixel Lab Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Meet was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Meet's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Meet is the ideal partner.",
+    name: "Joh Doe",
+    title: "CEO of Pixel Lab Technologies",
   },
 ];
 
@@ -204,14 +205,17 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    link: "https://github.com",
     img: "/git.svg",
   },
   {
     id: 2,
+    link: "https://twitter.com",
     img: "/twit.svg",
   },
   {
     id: 3,
+    link: "https://linkedin.com",
     img: "/link.svg",
   },
 ];
