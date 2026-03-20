@@ -6,12 +6,12 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-export const GridItems = [ 
+export const GridItems = [
   {
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "lg:col-span-3 md:col-span-4 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-4 md:row-span-4 lg:min-h-[470px]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",

@@ -6,7 +6,7 @@ import { PinContainer } from "./ui/Pin";
 const RecentProjects = () => {
   return (
     <section className="py-20" id="projects">
-      <h1 className="heading mb-10">
+      <h1 className="heading mb-10 relative z-50">
         A small selection of my
         <span className="text-purple"> recent projects</span>
       </h1>
@@ -20,7 +20,7 @@ const RecentProjects = () => {
               title={item.link}
               href={item.link}
             >
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[300px] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}

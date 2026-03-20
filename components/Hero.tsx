@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <div className='pb-14 pt-28'>
       <div>
-        <Spotlight className='-top-40 -left-10 md:-left-32 md-top-20 h-screen' fill='white'/>
-        <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='purple'/>
-        <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue'/>
+        <Spotlight className='-top-40 -left-10 md:-left-32 md-top-20 h-screen' fill='white' />
+        <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='purple' />
+        <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue' />
       </div>
       <div className="flex h-screen w-full items-center justify-center absolute top-0 left-0 dark:bg-black-100 dark:bg-grid-white/[0.03] bg-white">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white 
@@ -22,8 +22,8 @@ const Hero = () => {
           <h1 className='uppercase tracking-widest text-xs text-blue-100 max-w-80 text-center'>
             This is a demo portfolio
           </h1>
-          <TextGenerateEffect 
-            className='text-center text-[40px] md:text-5xl lg:text-5xl'
+          <TextGenerateEffect
+            className='text-center md:text-5xl lg:text-5xl max-w-[45rem]'
             words='Hello, this is Meet Thakkar'
             filter={false}
           />
@@ -32,7 +32,7 @@ const Hero = () => {
           </p>
           <div className='inline-flex items-center gap-3 mt-10'>
             <a href="/cv-template.pdf" target='_blank'>
-              <NewButton 
+              <NewButton
                 title='Download CV' position='right'
                 icon={<FaDownload />} />
             </a>
